@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4830131fa0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="n-logo.png" type="image/x-icon">
+    <title>Sign-Up</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(header-image.png);
+            background-size: cover;
+            position: center;
+            padding: 10px 8%;
+            position: relative;;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .center{
+            position: absolute;
+            top: 5%;
+            left: 90%;
+        }
+        button{
+            border: 0;
+            outline: 0;
+            background: #db001d;
+            padding: 7px 20px;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-left: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .popup{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.25);
+            width: 400px;
+            height: 390px;
+            padding: 20px 30px;
+            background: black;
+            box-shadow: 12px 32px 5px 5px rgba(rgb(225,225,225,0.15));
+            border-radius: 10px;
+            transition: top 0ms ease-in-out 200ms,opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+        }
+        .popup.active{
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: top 0ms ease-in-out 0ms,opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+        }
+    
+        .popup .form h2{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin: 10px 0px 20px ;
+            font-size: 25px;
+        }
+        .popup .form .form-element{
+            margin: 15px 0px;
+        }
+        .popup .form .form-element label{
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+        }
+        .popup .form .form-element input[type="text"]{
+            margin-top: 5px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-width: 1px solid #aaa;
+        }
+        .popup .form .form-element input[type="password"]{
+            margin-top: 5px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-width: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .popup .form .form-element input[type="checkbox"]{
+            margin-right: 5px;
+        }
+        .popup .form .form-element button{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: #db001d;
+            color: #f5f5ff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .popup .form .form-element .link1{
+            display: block;
+            text-align: right;
+            font-size: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .link{
+            color: white;
+            text-decoration: none;
+        }
+        .red::after{
+            font-size: 34px;
+            position: absolute;
+            right: 20px;
+            transition: transform 0.5s;
+        }
+        .logo{
+            width: 150px;
+            cursor: pointer;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        .s{
+            margin-left: 50px;
+            width: 80px;
+        }
+        .r{
+            margin-left: -150px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="net.png" class="logo">
+        <div class="center">
+          <button class="r"><a href="">Log In</a></button>
+          <button class="s"><a href="sign-in.html">Sign In</a></button>
+        </div>
+        <div class="popup">
+            <div class="close-btn"></div>
+            <div class="form">
+                <h2>Log In</h2>
+                <div class="form-element">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-element">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember me ">
+                    <label for="remember me">Remember me</label>
+                </div>
+                <div class="form-element">
+                    <button><a class="link" href="index.html">Login In</a></button>
+                </div>
+                <div class="f">
+                    <a href="">Forgot password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
